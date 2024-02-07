@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
+      <OutputType>WinExe</OutputType>
+      <TargetFramework>net8.0</TargetFramework>
+      <Nullable>enable</Nullable>
 
       <AssemblyName></AssemblyName>
       <AssemblyTitle></AssemblyTitle>
@@ -18,10 +18,10 @@
       <AssemblyVersion></AssemblyVersion>
       <FileVersion></FileVersion>
       <InformationalVersion></InformationalVersion>
-      
-    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
-    <ApplicationManifest>app.manifest</ApplicationManifest>
-    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+
+      <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+      <ApplicationManifest>app.manifest</ApplicationManifest>
+      <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
   </PropertyGroup>
 
   <ItemGroup>
@@ -29,17 +29,15 @@
     <AvaloniaResource Include="Assets\**" />
   </ItemGroup>
 
-
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="11.0.6" />
     <PackageReference Include="Avalonia.Desktop" Version="11.0.6" />
     <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.6" />
     <PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.6" />
-    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <!-- Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration. -->
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.6" />
     <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.6" />
   </ItemGroup>
-
 
   <ItemGroup>
     <ProjectReference Include="..\yyGptBookLib\yyGptBookLib.csproj" />
