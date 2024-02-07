@@ -1,0 +1,9 @@
+﻿# ディレクトリー
+.vs/
+App/
+bin/
+obj/
+
+# ファイル
+.DS_Store
+Thumbs.db
